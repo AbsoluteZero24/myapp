@@ -3,6 +3,7 @@ FROM php:8.0-apache
 
 # Aktifkan ekstensi PHP yang dibutuhkan (contoh: mysqli)
 RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN apt-get update && apt-get install -y vim
     
 # Salin seluruh source code ke dalam container
 COPY . /var/www/html/
