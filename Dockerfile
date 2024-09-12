@@ -9,6 +9,7 @@ COPY . /var/www/html/
 
 # Berikan izin yang sesuai untuk folder writable (dibutuhkan oleh CodeIgniter)
 RUN chown -R www-data:www-data /var/www/html/writable && chmod -R 775 /var/www/html/writable
+RUN echo 'ServerName localhost' >> /etc/apache2/apache2.conf
 
 # Expose port 80 untuk Apache
 EXPOSE 80
