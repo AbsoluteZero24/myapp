@@ -3,12 +3,6 @@ FROM php:8.0-apache
 
 # Aktifkan ekstensi PHP yang dibutuhkan (contoh: mysqli)
 RUN docker-php-ext-install mysqli pdo pdo_mysql
-RUN echo '<Directory /var/www/html/public>\n\
-    AllowOverride All\n\
-    Require all granted\n\
-</Directory>\n' > /etc/apache2/conf-available/codeigniter.conf \
-    && a2enconf codeigniter \
-    && service apache2 reload
     
 # Salin seluruh source code ke dalam container
 COPY . /var/www/html/

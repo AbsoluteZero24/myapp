@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: absolutezero24/myapp:v1.1
+        image: absolutezero24/myapp:latest
         ports:
         - containerPort: 80
 ---
