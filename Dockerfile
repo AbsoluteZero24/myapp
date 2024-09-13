@@ -32,4 +32,4 @@ RUN echo '<Directory /var/www/html/public>\n\
     Require all granted\n\
 </Directory>' > /etc/apache2/conf-available/codeigniter.conf \
     && a2enconf codeigniter
-#RUN echo 'DocumentRoot /var/www/html/public' >> /etc/apache2/sites-available/000-default.conf
+RUN echo 'DocumentRoot /var/www/html/public' >> /etc/apache2/sites-available/000-default.conf
